@@ -1,0 +1,40 @@
+/* Basic setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Background color */
+    font-family: Arial, sans-serif;
+}
+
+/* Container for pop-up text */
+.container {
+    text-align: center;
+}
+
+/* Pop-up text styles */
+.pop-up {
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #1d59ac; /* Background color for pop-up */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    opacity: 0; /* Start hidden */
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for smooth effect */
+}
+
+/* Show pop-up text */
+.pop-up.show {
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Hidden class */
+.hidden {
+    display: none; /* Initially hide the pop-up */
+}

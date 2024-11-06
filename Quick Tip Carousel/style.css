@@ -1,0 +1,53 @@
+/* Global styling for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+  }
+  
+  /* Carousel container */
+  .carousel-container {
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000; /* Ensure container is black */
+    border-radius: 10px; /* Optional: add rounded corners */
+  }
+  
+  /* Carousel itself */
+  .carousel {
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  /* Styling for each tip */
+  .tip {
+    min-width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #222; /* Dark background for the tips */
+    color: #fff; /* White text */
+    font-size: 1.2rem;
+    border: 1px solid #444;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  /* Animation for fading in each tip */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

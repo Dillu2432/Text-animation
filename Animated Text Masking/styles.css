@@ -1,0 +1,48 @@
+/* Basic setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Set background color to black */
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the text */
+.container {
+    text-align: center;
+}
+
+/* Masked text styles */
+.masked-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff; /* Text color will be masked */
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent text wrapping */
+    border-right: 4px solid #fff; /* Cursor effect */
+    animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #fff;
+    }
+}
+

@@ -1,0 +1,87 @@
+/* Basic setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Background color */
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the text */
+.container {
+    text-align: center;
+}
+
+/* Glitch text styles */
+.glitch {
+    color: white; /* Base text color */
+    font-size: 4rem;
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Hide overflow to create the glitch effect */
+}
+
+.glitch:before,
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    color: red; /* Color for the first glitch effect */
+    opacity: 0.8; /* Slight transparency */
+    animation: glitch-anim 1s infinite linear alternate-reverse; /* Glitch animation */
+}
+
+.glitch:after {
+    color: cyan; /* Color for the second glitch effect */
+    animation: glitch-anim-2 1s infinite linear alternate-reverse; /* Different glitch animation */
+}
+
+/* Keyframes for glitch animations */
+@keyframes glitch-anim {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, -2px);
+    }
+    40% {
+        transform: translate(2px, 0);
+    }
+    60% {
+        transform: translate(0, 2px);
+    }
+    80% {
+        transform: translate(-2px, 2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(2px, 2px);
+    }
+    40% {
+        transform: translate(-2px, 0);
+    }
+    60% {
+        transform: translate(0, -2px);
+    }
+    80% {
+        transform: translate(2px, -2px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+

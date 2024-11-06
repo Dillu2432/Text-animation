@@ -1,0 +1,36 @@
+/* Basic setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Background color */
+    font-family: Arial, sans-serif;
+}
+
+/* Container for scrolling text */
+.container {
+    width: 100%;
+    overflow: hidden; /* Hide overflow to create scrolling effect */
+}
+
+/* Scrolling text styles */
+.scrolling-text {
+    display: inline-block; /* Make it inline-block for smooth scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    animation: scroll 10s linear infinite; /* Animation for scrolling */
+    font-size: 2rem; /* Font size */
+    color: white; /* Text color */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start off-screen on the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End off-screen on the left */
+    }
+}

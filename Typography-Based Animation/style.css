@@ -1,0 +1,51 @@
+/* Global styling for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Black background */
+  }
+  
+  /* Styling for the text animation */
+  .text-animation {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* Initial text color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: typographyEffect 5s ease-in-out infinite; /* Loop the animation */
+  }
+  
+  /* Keyframes for the typography animation */
+  @keyframes typographyEffect {
+    0% {
+      transform: scale(1); /* Original size */
+      color: #fff; /* White color */
+      letter-spacing: 2px; /* Default letter spacing */
+    }
+    25% {
+      transform: scale(1.1); /* Grow the text */
+      color: #ff6347; /* Change color to tomato */
+      letter-spacing: 5px; /* Increase letter spacing */
+    }
+    50% {
+      transform: scale(1); /* Reset size */
+      color: #32cd32; /* Change color to lime green */
+      letter-spacing: 2px; /* Reset letter spacing */
+    }
+    75% {
+      transform: scale(1.2); /* Grow the text more */
+      color: #1e90ff; /* Change color to dodger blue */
+      letter-spacing: 10px; /* Increase letter spacing more */
+    }
+    100% {
+      transform: scale(1); /* Return to original size */
+      color: #fff; /* Return to white color */
+      letter-spacing: 2px; /* Reset letter spacing */
+    }
+  }
+  

@@ -1,0 +1,51 @@
+/* Basic setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Set background color to black */
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the before/after section */
+.container {
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling for before and after images */
+.before-after {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.before, .after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.before img, .after img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider for the transition */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 5px;
+    background: #fff; /* Slider color */
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    z-index: 1;
+}
